@@ -1,0 +1,13 @@
+{
+  "name": "@cr-pl/basic-image-carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["carousel", "image", "image-carousel", "slider"],
+  "author": "cr-pl",
+  "license": "ISC"
+}

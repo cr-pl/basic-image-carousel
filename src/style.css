@@ -1,0 +1,13 @@
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    transition: opacity 0.5s;
+  }
+  

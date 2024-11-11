@@ -8,23 +8,13 @@
  */
 /******/ var __webpack_modules__ = ({
 
-/***/ "../index.js":
-/*!*******************!*\
-  !*** ../index.js ***!
-  \*******************/
-/***/ ((module) => {
-
-eval("class BasicImageCarousel {\r\n    constructor(images = null, options = {}) {\r\n      this.images = images || [\r\n        'https://picsum.photos/seed/picsum/400/300',\r\n        'https://picsum.photos/400/300?grayscale',\r\n        'https://picsum.photos/400/300/?blur',\r\n      ];\r\n      this.currentIndex = 0;\r\n      this.interval = options.interval || 3000;\r\n      this.container = document.createElement('div');\r\n      this.imageElement = document.createElement('img');\r\n      this.container.className = 'carousel-container';\r\n      this.imageElement.className = 'carousel-image';\r\n      this.container.appendChild(this.imageElement);\r\n      document.body.appendChild(this.container);\r\n      this.showImage();\r\n    }\r\n  \r\n    start() {\r\n      this.stop();\r\n      this.intervalId = setInterval(() => this.nextImage(), this.interval);\r\n    }\r\n  \r\n    stop() {\r\n      if (this.intervalId) {\r\n        clearInterval(this.intervalId);\r\n      }\r\n    }\r\n  \r\n    nextImage() {\r\n      this.currentIndex = (this.currentIndex + 1) % this.images.length;\r\n      this.showImage();\r\n    }\r\n  \r\n    showImage() {\r\n      this.imageElement.src = this.images[this.currentIndex];\r\n    }\r\n  }  \r\nmodule.exports = BasicImageCarousel;\n\n//# sourceURL=webpack:///../index.js?");
-
-/***/ }),
-
-/***/ "./carousel.js":
-/*!*********************!*\
-  !*** ./carousel.js ***!
-  \*********************/
+/***/ "./app.js":
+/*!****************!*\
+  !*** ./app.js ***!
+  \****************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"../src/style.css\");\n//npx webpack\r\n\r\nwindow.CRPLCarousel = __webpack_require__(/*! ../index.js */ \"../index.js\")\r\n\r\n\n\n//# sourceURL=webpack:///./carousel.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"../src/style.css\");\n//run: npx webpack in order to generate ../dist/carousel-bundle.js\r\n\r\nwindow.CRPLCarousel = __webpack_require__(/*! ../src/carousel.cjs */ \"../src/carousel.cjs\");\r\n\r\n\r\n// window.CRPLCarousel = (require('../src/carousel.class.js'));\r\n// var name = instance.getName();\r\n// console.log(instance);\r\n\n\n//# sourceURL=webpack:///./app.js?");
 
 /***/ }),
 
@@ -126,6 +116,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj
 
 eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack:///./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
 
+/***/ }),
+
+/***/ "../src/carousel.cjs":
+/*!***************************!*\
+  !*** ../src/carousel.cjs ***!
+  \***************************/
+/***/ ((module) => {
+
+eval("\n\nconst BasicImageCarousel = class BasicImageCarousel {\r\n    constructor(images = null, options = {}) {\r\n      this.images = images || [\r\n        'https://picsum.photos/seed/picsum/400/300',\r\n        'https://picsum.photos/400/300?grayscale',\r\n        'https://picsum.photos/400/300/?blur',\r\n      ];\r\n      this.currentIndex = 0;\r\n      this.interval = options.interval || 3000;\r\n      this.container = document.createElement('div');\r\n      this.imageElement = document.createElement('img');\r\n      this.container.className = 'carousel-container';\r\n      this.imageElement.className = 'carousel-image';\r\n      this.container.appendChild(this.imageElement);\r\n      document.body.appendChild(this.container);\r\n      this.showImage();\r\n    }\r\n  \r\n    start() {\r\n      this.stop();\r\n      this.intervalId = setInterval(() => this.nextImage(), this.interval);\r\n    }\r\n  \r\n    stop() {\r\n      if (this.intervalId) {\r\n        clearInterval(this.intervalId);\r\n      }\r\n    }\r\n  \r\n    nextImage() {\r\n      this.currentIndex = (this.currentIndex + 1) % this.images.length;\r\n      this.showImage();\r\n    }\r\n  \r\n    showImage() {\r\n      this.imageElement.src = this.images[this.currentIndex];\r\n    }\r\n  };\n\nmodule.exports = BasicImageCarousel;\n\n\n//# sourceURL=webpack:///../src/carousel.cjs?");
+
 /***/ })
 
 /******/ });
@@ -205,5 +205,5 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /******/ // startup
 /******/ // Load entry module and return exports
 /******/ // This entry module can't be inlined because the eval devtool is used.
-/******/ var __webpack_exports__ = __webpack_require__("./carousel.js");
+/******/ var __webpack_exports__ = __webpack_require__("./app.js");
 /******/ 

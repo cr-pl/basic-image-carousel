@@ -1,4 +1,6 @@
-class BasicImageCarousel {
+'use strict';
+
+const BasicImageCarousel = class BasicImageCarousel {
     constructor(images = null, options = {}) {
       this.images = images || [
         'https://picsum.photos/seed/picsum/400/300',
@@ -35,5 +37,6 @@ class BasicImageCarousel {
     showImage() {
       this.imageElement.src = this.images[this.currentIndex];
     }
-  }  
+  };
+
 module.exports = BasicImageCarousel;

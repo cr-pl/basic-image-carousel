@@ -1,21 +1,13 @@
 image-carousel
 ======
-
 A light-weight image carousel
 
+Basic usage:
 ```
-//js
-import '../src/style.css';
-window.CRPLCarousel = require('../index.js')
-
-//html
-<body>
-  <script src="./dist/bundle.js"></script>
+  <script src="/dist/carousel-common.js"></script>
   <script>
     // Instantiate the Carousel with no images to use the default array
-    const carousel = new CRPLCarousel(null, 2000);
+    (new CRPLCarousel(null, 2000)).start();
     // Instantiate the Carousel with some images
-    // const carousel = new CRPLCarousel(['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg'], 2000);
-    carousel.start();
+    // (new CRPLCarousel(['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg'], 2000)).start();
   </script>
-</body>

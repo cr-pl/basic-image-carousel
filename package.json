@@ -1,6 +1,6 @@
 {
   "name": "@cr-pl/basic-image-carousel",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./src/carousel.mjs",
   "scripts": {
@@ -25,7 +25,13 @@
     "url": "https://github.com/cr-pl/basic-image-carousel.git"
   },
   "exports": {
-    "import": "./src/carousel.mjs",
-    "require": "./src/carousel.cjs"
+    ".": {
+      "import": "./src/carousel.mjs",
+      "require": "./src/carousel.cjs"
+    },
+    "./style.css": {
+      "import": "./src/style.css",
+      "require": "./src/style.css"
+    }
   }
 }

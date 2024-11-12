@@ -14,7 +14,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"../src/style.css\");\n//run: npx webpack in order to generate the bundle: /dist/carousel-bundle.js\r\nwindow.CRPLCarousel = __webpack_require__(/*! ../src/carousel.cjs */ \"../src/carousel.cjs\");\r\n\r\n\n\n//# sourceURL=webpack:///./carousel.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/style.css */ \"../src/style.css\");\n//run: npx webpack in order to generate the bundle: /dist/carousel-common.js\r\nwindow.BasicImageCarousel = __webpack_require__(/*! ../src/carousel.cjs */ \"../src/carousel.cjs\");\r\n\r\n\n\n//# sourceURL=webpack:///./carousel.js?");
 
 /***/ }),
 

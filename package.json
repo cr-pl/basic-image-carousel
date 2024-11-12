@@ -1,6 +1,6 @@
 {
   "name": "@cr-pl/basic-image-carousel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "./src/carousel.mjs",
   "scripts": {
@@ -17,7 +17,8 @@
   "author": "cr-pl",
   "license": "ISC",
   "devDependencies": {
-    "rollup": "^4.25.0"
+    "rollup": "^4.25.0",
+    "webpack-cli": "^5.1.4"
   },
   "type": "module",
   "repository": {

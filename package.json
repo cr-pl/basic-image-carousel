@@ -20,6 +20,10 @@
     "rollup": "^4.25.0"
   },
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cr-pl/basic-image-carousel.git"
+  },
   "exports": {
     "import": "./src/carousel.mjs",
     "require": "./src/carousel.cjs"

@@ -39,4 +39,7 @@ const BasicImageCarousel = class BasicImageCarousel {
     }
   };
 
+//convert code into a CommonJS module.: 
+//npx rollup index.mjs --file ./src/carousel.cjs --format cjs
+
 module.exports = BasicImageCarousel;

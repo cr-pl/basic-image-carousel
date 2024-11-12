@@ -2,7 +2,7 @@
   "name": "@cr-pl/basic-image-carousel",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/carousel.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,6 +10,8 @@
     "carousel",
     "image",
     "image-carousel",
+    "light",
+    "lightweight",
     "slider"
   ],
   "author": "cr-pl",
@@ -19,7 +21,7 @@
   },
   "type": "module",
   "exports": {
-    "import": "./index.js",
+    "import": "./src/carousel.mjs",
     "require": "./src/carousel.cjs"
   }
 }

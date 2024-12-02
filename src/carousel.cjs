@@ -9,12 +9,19 @@ const BasicImageCarousel = class BasicImageCarousel {
       ];
       this.currentIndex = 0;
       this.interval = options.interval || 3000;
-      this.container = document.createElement('div');
+      
+      if(options.container){
+        this.container = options.container;
+      }else {
+        this.container = document.createElement('div');
+        document.body.appendChild(this.container);
+      }
+
       this.imageElement = document.createElement('img');
       this.container.className = 'carousel-container';
       this.imageElement.className = 'carousel-image';
       this.container.appendChild(this.imageElement);
-      document.body.appendChild(this.container);
+      
       this.showImage();
     }
   
@@ -38,8 +45,5 @@ const BasicImageCarousel = class BasicImageCarousel {
       this.imageElement.src = this.images[this.currentIndex];
     }
   };
-
-//convert code into a CommonJS module.: 
-//npx rollup index.mjs --file ./src/carousel.cjs --format cjs
 
 module.exports = BasicImageCarousel;
